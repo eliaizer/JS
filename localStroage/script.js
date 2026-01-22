@@ -18,10 +18,11 @@ if (localStorage.getItem("countVisit")) {
     let temp = Number(localStorage.getItem("countVisit")) + 1;
     localStorage.setItem("countVisit", `${temp}`)
     if (localStorage.getItem("name")) {
-        paragraph.innerHTML = `Ну здарова, ${localStorage.getItem("name")}. Ты сюда уже ${temp} ${temp > 1 && temp < 5 ? "раза" : "раз"} заходил. Я тебя запомнил если-что`;
+        paragraph.innerHTML = `Ну здарова, ${localStorage.getItem("name")}. Ты сюда уже ${temp} ${((temp % 10 > 1 && temp % 10 < 5) && Math.floor(temp % 100 / 10) != 1) ? "раза" : "раз"} заходил. Я тебя запомнил если-что`;
     }
-    else {paragraph.innerHTML = `Добрый день. Вы заходили сюда ${temp} ${temp > 1 && temp < 5 ? "раза" : "раз"}.`;}
+    else {paragraph.innerHTML = `Добрый день. Вы заходили сюда ${temp} ${((temp % 10 > 1 && temp % 10 < 5) && Math.floor(temp % 100 / 10) != 1) ? "раза" : "раз"}.`;}
 }
 else {
     localStorage.setItem("countVisit", "0");
+
 }
