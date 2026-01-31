@@ -1,0 +1,33 @@
+body {
+    align-content: center;
+    margin: auto;
+}
+
+header {
+    background-color: khaki;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+
+}
+
+.card {
+    max-width: 800px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+input {
+    border-radius: 5px;
+}
+
+input.styled_button {
+    
+    padding: 5px;
+    background-color:khaki;
+    border-radius: 5px;
+}

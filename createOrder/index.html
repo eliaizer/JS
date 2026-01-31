@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Order</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="settings">
+        <p>Имя того на кого выпадет стрелка: </p><input type="text">
+        <p>Скорость рулетки: </p><input type="range" min="1" max="100">
+        <p>Картинка рулетки: </p><input type="file">
+    </div>
+    <div style="text-align: center;">
+        <div id="instruction">Всё просто! Нажимаете пробел для старта рулетки и пробел на конца рулетки. Узнаём на кого показывает стрелка</div>
+        <div id="message">* на 0 градусов!!!</div>
+        <img id="rouletImage" src="sticker.webp">
+        <button class="translate" style="background-color: green; color: white; opacity: 100%;">Перевести текст</button>
+    </div>
+</body>
+</html>
