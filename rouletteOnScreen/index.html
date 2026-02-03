@@ -5,19 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roulette On Screen</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="settings">
-        <p>Имя того на кого выпадет стрелка: </p><input type="text">
-        <p>Скорость рулетки: </p><input type="range" min="1" max="100">
-        <p>Картинка рулетки: </p><input type="file">
-    </div>
-    <div style="text-align: center;">
-        <div id="instruction">Всё просто! Нажимаете пробел для старта рулетки и пробел на конца рулетки. Узнаём на кого показывает стрелка</div>
-        <div id="message">* на 0 градусов!!!</div>
-        <img id="rouletImage" src="sticker.webp">
-        <button class="translate" style="background-color: green; color: white; opacity: 100%;">Перевести текст</button>
-    </div>
+    <header>
+        <h1><a href="../">Main</a>/Roulette On Screen</h1>
+        <nav>
+            <ul>
+                <li><a href="../DOM/">DOM Manipulation</a></li>
+                <li><a href="../localStorage/">Local Storage</a></li>
+                <li><a href="../createOrder/">Create Order</a></li>
+                <li><a href="../priceCalculator/">Price Calculator</a></li>
+                <li><a href="../rouletteOnScreen/">Roulette On Screen</a></li>
+            </ul>
+            <button id="themeToggle" class="theme-toggle">🌙</button>
+        </nav>
+    </header>
+    <main>
+        <div class="post-block">
+            <p>Имя того на кого выпадет стрелка: </p><input type="text">
+            <p>Скорость рулетки: </p><input type="range" min="1" max="100">
+            <p>Картинка рулетки: </p><input type="file">
+        </div>
+        <div class="post-block">
+            <div id="instruction">Всё просто! Нажимаете пробел для старта рулетки и пробел на конца рулетки. Узнаём на кого показывает стрелка</div>
+            <div id="message">* на 0 градусов!!!</div>
+            <img id="rouletImage" src="sticker.webp">
+        </div>
+    </main>
 </body>
 </html>

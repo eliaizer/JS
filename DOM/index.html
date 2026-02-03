@@ -5,16 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div style="text-align: center;">
-        <div id="message">Привет, мир!</div>
-        <a id="myLink" href="https://www.google.com">Открыть Google</a>
-        <div id="styleBox">Стилизация!</div>
-        <button class="translate" style="background-color: green; color: white; opacity: 100%;">Перевести текст</button>
-        <button class="link" style="background-color: green; color: white; opacity: 100%;">Поменять ссылку</button>
-        <button class="style" style="background-color: green; color: white; opacity: 100%;">Поменять стиль</button>
-    </div>
+    <header>
+        <h1><a href="../">Main</a>/DOM Manipulation</h1>
+        <nav>
+            <ul>
+                <li><a href="../DOM/">DOM Manipulation</a></li>
+                <li><a href="../localStorage/">Local Storage</a></li>
+                <li><a href="../createOrder/">Create Order</a></li>
+                <li><a href="../priceCalculator/">Price Calculator</a></li>
+                <li><a href="../rouletteOnScreen/">Roulette On Screen</a></li>
+            </ul>
+            <button id="themeToggle" class="theme-toggle">🌙</button>
+        </nav>
+    </header>
+    <main>
+        <div class="post-block">
+            <div id="message">Привет, мир!</div>
+            <a id="myLink" href="https://www.google.com">Открыть Google</a>
+            <div id="styleBox">Стилизация!</div>
+            <button class="translate">Перевести текст</button>
+            <button class="link">Поменять ссылку</button>
+            <button class="style">Поменять стиль</button>
+            <button class="btn-no default">Сбросить всё</button>
+        </div>
+    </main>
 </body>
 </html>

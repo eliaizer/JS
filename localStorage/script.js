@@ -1,0 +1,30 @@
+let paragraph = document.querySelector("p");
+let input = document.querySelector("input");
+let yesButton = document.querySelector("button.btn-yes");
+let noButton = document.querySelector("button.btn-no");
+
+yesButton.addEventListener("click", clickKeepFunction);
+noButton.addEventListener("click", clickUnKeepFunction);
+
+function clickKeepFunction(event) {
+    alert("Мы тебя запомнили, " + input.value + "!🥸");
+    localStorage.setItem("name", `${input.value}`);
+}
+
+function clickUnKeepFunction(event) {
+    alert("Мы тебя забыли! Прощай, " +  localStorage.getItem("name") + "😢");
+    localStorage.removeItem("name");
+}
+    
+
+if (localStorage.getItem("countVisit")) {
+    let temp = Number(localStorage.getItem("countVisit")) + 1;
+    localStorage.setItem("countVisit", `${temp}`)
+    if (localStorage.getItem("name")) {
+        paragraph.innerHTML = `Ну здарова, ${localStorage.getItem("name")}. Ты сюда уже ${temp} ${((temp % 10 > 1 && temp % 10 < 5) && Math.floor(temp % 100 / 10) != 1) ? "раза" : "раз"} заходил. Я тебя запомнил если-что`;
+    }
+    else {paragraph.innerHTML = `Добрый день. Вы заходили сюда ${temp} ${((temp % 10 > 1 && temp % 10 < 5) && Math.floor(temp % 100 / 10) != 1) ? "раза" : "раз"}.`;}
+}
+else {
+    localStorage.setItem("countVisit", "0");
+}
